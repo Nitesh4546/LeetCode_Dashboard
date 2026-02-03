@@ -37,3 +37,6 @@ A high-performance, dark-themed dashboard designed for the Linux desktop (optimi
 Ensure you have Python installed with the necessary libraries:
 ```bash
 pip install PySide6 requests
+```
+### 2. Add your username
+In ```leetcode_assets.py``` in line ```8``` replace the value of ```USERNAME``` with your username.
