@@ -2,7 +2,9 @@
 
 A high-performance, dark-themed dashboard designed for the Linux desktop (optimized for Hyprland/Quickshell). This application provides a real-time overview of your LeetCode progress, activity heatmap, and upcoming contests in a glossy, frameless overlay.
 
-## 🚀 Features
+## Preview
+![dashboard_preview](./img/preview.png)
+## Features
 
 * **Dynamic Progress Visualization**: Three concentric rings visualizing Easy, Medium, and Hard problems solved with interactive hover states.
 * **9-Month Contribution Heatmap**: A GitHub-style activity tracker calculating streaks and submission intensity.
@@ -11,7 +13,7 @@ A high-performance, dark-themed dashboard designed for the Linux desktop (optimi
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Frontend**: QML (Qt Quick) with `Qt5Compat` for graphical effects.
 * **Backend**: Python 3.x using PySide6 for data processing and Qt signal management.
@@ -19,7 +21,7 @@ A high-performance, dark-themed dashboard designed for the Linux desktop (optimi
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 | File | Description |
 | :--- | :--- |
@@ -31,7 +33,7 @@ A high-performance, dark-themed dashboard designed for the Linux desktop (optimi
 
 ---
 
-## ⚙️ Installation & Usage
+## Installation & Usage
 
 ### 1. Prerequisites
 Ensure you have Python installed with the necessary libraries:
