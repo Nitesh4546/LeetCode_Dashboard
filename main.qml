@@ -17,11 +17,14 @@ ApplicationWindow {
     title: "LeetCode Dashboard"
     color: "#0a0a0a"
 
-    // Closes the application when clicking the background
+    // Background click closes the app (intentional widget-close gesture)
     MouseArea {
         anchors.fill: parent
         z: -1
-        onPressed: Qt.quit()
+        onPressed: (mouse) => {
+            // ignore clicks on the scrollbar itself (handled by higher-priority areas)
+            Qt.quit()
+        }
     }
 
     Flickable {
@@ -71,6 +74,27 @@ ApplicationWindow {
                             text: leetcode ? leetcode.ranking : "N/A"
                             color: "white"; font.pixelSize: 22; font.bold: true; horizontalAlignment: Text.AlignRight
                         }
+                    }
+                }
+
+                // Loading / error banner
+                Rectangle {
+                    Layout.fillWidth: true
+                    visible: (leetcode && leetcode.loading) || (leetcode && leetcode.errorMessage !== "")
+                    height: statusText.implicitHeight + 16
+                    radius: 8
+                    color: leetcode.loading ? "#1a2d2a" : "#2d1a1a"
+                    border.color: leetcode.loading ? "#00b8a3" : "#ff375f"
+                    border.width: 1
+
+                    Text {
+                        id: statusText
+                        anchors.centerIn: parent
+                        color: "white"
+                        font.pixelSize: 12
+                        text: leetcode.loading
+                              ? "Loading LeetCode stats..."
+                              : "⚠ " + leetcode.errorMessage
                     }
                 }
 
